@@ -1,31 +1,24 @@
 <?php
   public function testDescriptionResultado(): void {
-    $sol = '/*...content...*/';
+    $solucao = '/*...content...*/';
 
     $array1 = [5,5,5,5,1];
-    $sol1 = $this->racha($array1);
+    $resultado1 = $this->numeroDaSorte($array1);
 
-    $funciona = $sol1 == 4;
+    $this->assertTrue($resultado1 == 4, "Sua função não está funcionando muito bem :(");
 
-    $array2 = [1,1];
-    $sol2 = $this->racha($array2);
+    $array2 = [5,5,4,5,6];
+    $resultado2 = $this->numeroDaSorte($array2);
 
-    $funciona = $funciona && $sol2 == 0;
+    $this->assertTrue($resultado2 == 2, "Sua função não está funcionando muito bem :(");
 
-    $array3 = [5,5,5,5,5,5,5,5,5,5,1];
-    $sol3 = $this->racha($array3);
+    $contaWhile = substr_count($solucao, "while");
 
-    $funciona = $funciona && $sol3 == 10;
+    $this->assertTrue($contaWhile > 0, "Você não utlizou nenhum while!");
 
-    $this->assertTrue($funciona, "La función no esta contando bien la racha...");
+    $contaFor = substr_count($solucao, "for");
 
-    $cantWhile = substr_count($sol, "while");
-
-    $this->assertTrue($cantWhile > 0, "Parecería que no escribiste ningún while...");
-
-    $cantFor = substr_count($sol, "for");
-
-    $this->assertTrue($cantFor == 0, "No deberías utilizar el for en este ejercicio");
+    $this->assertTrue($contaFor == 0, "Não utilize for para resolver esse exercício!");
   }
 
   private /*...content...*/

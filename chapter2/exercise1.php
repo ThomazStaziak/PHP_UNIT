@@ -8,7 +8,7 @@
 
     $numeros = true;
 
-    for ($i = 0; $i < 11; $i) {
+    for ($i = 0; $i < 11; $i++) {
       if ($resultados[$i] != $i) {
         $numeros = false;
         break;
