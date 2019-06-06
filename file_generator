@@ -14,4 +14,8 @@ echo "type the name of folder to move the created files"
 read folder_name
 mkdir $folder_name
 mv exer* $folder_name
-echo "the files has been moved"
+echo "the files has been moved\n"
+echo "choose the folder to move the created folder"
+read folder
+mv folder_name folder
+echo "everything done ;)"
